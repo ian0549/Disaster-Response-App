@@ -40,25 +40,25 @@ To setup this project in your own environment, the following libraries need to b
 
 - app
   - template
-   - master.html  # main page of web app
-   - go.html  # classification result page of web app
+    - master.html  # main page of web app
+    - go.html  # classification result page of web app
   - run.py  # Flask Python script to run the web app
 
 
 
 - data - Directory for the data files and python script for processing the data
- - disaster_categories.csv  # data to process 
- - disaster_messages.csv  # data to process
- - process_data.py      # python file to process dataset
- - InsertDatabaseName.db   # database to save clean data to
+  - disaster_categories.csv  # data to process 
+  - disaster_messages.csv  # data to process
+  - process_data.py      # python file to process dataset
+  - InsertDatabaseName.db   # database to save clean data to
 
 - models
- - train_classifier.py  #Python script for training the classifier and saving the model
- - classifier.pkl  # saved model 
+  - train_classifier.py  #Python script for training the classifier and saving the model
+  - classifier.pkl  # saved model 
 
 - pipelines
- - ETL Pipeline Preparation.ipynb # Notebook for ETL pipeline
- - ML Pipeline Preparation.ipynb  # Notebook for ML pipeline
+  - ETL Pipeline Preparation.ipynb # Notebook for ETL pipeline
+  - ML Pipeline Preparation.ipynb  # Notebook for ML pipeline
 
 - README.md
 
