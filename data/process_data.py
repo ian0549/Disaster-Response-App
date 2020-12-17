@@ -71,6 +71,9 @@ def clean_data(df):
     # drop the original categories column from `df`
     df.drop(columns=['categories'], inplace=True)   
     
+    #the related column should be binary, replace 2's with 1's
+    categories.related.replace(inplace=True, to_replace=2, value=1)
+    
     # concatenate the original dataframe with the new `categories` dataframe
     df = pd.concat([df,categories], axis=1)
     
@@ -91,7 +94,7 @@ def save_data(df, database_filename):
     '''
 
     engine = create_engine('sqlite:///' + database_filename)
-    df.to_sql('messages', engine, index=False)
+    df.to_sql('messages', engine, index=False, if_exists='replace')
 
     
     return None
